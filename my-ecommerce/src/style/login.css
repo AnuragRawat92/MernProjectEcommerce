@@ -11,8 +11,9 @@
     flex-direction: column;
     gap: 30px;
     background-color: #1a1a2e;
+    overflow-y: auto; /* Allows scrolling if content overflows */
+    max-height: 100vh; /* Prevents overflowing beyond screen height */
 }
-
 .auth-header {
     width: 100%;
     display: flex;
@@ -42,6 +43,11 @@
     border-radius: 15px;
 }
 
+
+.auth-container {
+    max-height: 90vh; /* Makes sure the form doesn't overflow */
+    overflow-y: auto; /* Enables scrolling inside the form */
+}
 .auth-btn {
     height: 60px;
     width: 300px;
@@ -85,6 +91,12 @@
     overflow: hidden; /* Prevents extra spacing */
     display: flex;
     position: relative;
+}
+
+.auth-form-section {
+    max-height: 80vh;
+    overflow-y: auto;
+    padding-bottom: 20px; /* Ensures the last input isn't cut off */
 }
 
 .auth-login-box, 
@@ -252,4 +264,11 @@
 
 .back-home-btn:hover {
     background-color: #005f8d;
+}
+@media screen and (max-height: 600px) {
+    .auth-container {
+        height: auto;
+        max-height: 85vh;
+        overflow-y: auto;
+    }
 }
