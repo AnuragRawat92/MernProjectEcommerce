@@ -9,7 +9,7 @@ const Footer = () => {
         {/* Left Side - Brand */}
         <div className="flex items-center space-x-3">
           <img 
-            src="https://cdn-icons-png.flaticon.com/512/6033/6033716.png" 
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk6p460g_jh7r196-itgMQtmr6brMvE-WKjg4ZsozFD01fenD3y3Sn7aKFeuSGruA8_zE&usqp=CAU" 
             alt="Male Fashion Logo" 
             className="w-10 h-10"
           />
