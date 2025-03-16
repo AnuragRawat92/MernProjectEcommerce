@@ -25,8 +25,8 @@ const PaymentPage = () => {
 
     try {
       const amountInPaise = totalPriceINR * 100;
-
-      const { data } = await axios.post("http://localhost:7000/api/payment/orders", {
+ const url="https://mernprojectecommerce-backend.onrender.com"
+      const { data } = await axios.post(url + "/api/payment/orders", {
         amount: amountInPaise,
       });
 
@@ -39,8 +39,8 @@ const PaymentPage = () => {
         order_id: data.id,
         handler: async (response) => {
           try {
-            const { data: verificationData } = await axios.post(
-              "http://localhost:7000/api/payment/verify",
+            const { data: verificationData } = await axios.post(url+
+              "/api/payment/verify",
               {
                 razorpay_order_id: response.razorpay_order_id,
                 razorpay_payment_id: response.razorpay_payment_id,
