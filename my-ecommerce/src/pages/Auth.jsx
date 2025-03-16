@@ -43,11 +43,12 @@ const Auth = ({ setIsAuthenticated }) => {
   };
 
   const handleLogin = async () => {
+    const url="https://mernprojectecommerce-backend.onrender.com"
     if (!validateForm()) return;
     setLoading(true);
     try {
-      const res = await axios.post(
-        "http://localhost:7000/api/auth/login",
+      const res = await axios.post(url +
+        "/api/auth/login",
         { email: formData.email, password: formData.password },
         { withCredentials: true }
       );
@@ -64,11 +65,12 @@ const Auth = ({ setIsAuthenticated }) => {
   };
   
   const handleSignup = async () => {
+     const url="https://mernprojectecommerce-backend.onrender.com"
     if (!validateForm()) return;
     setLoading(true);
     try {
-      const res = await axios.post(
-        "http://localhost:7000/api/auth/register",
+      const res = await axios.post(url+
+        "/api/auth/register",
         {
           name: formData.name,
           email: formData.email,
