@@ -15,7 +15,7 @@ connectDB();
 const app = express();
 
 app.use(express.json());
-app.use(cors({ origin: "http://localhost:5173", credentials: true })); // Adjust origin for frontend
+app.use(cors({ origin: "https://mernprojectecommerce-frontend-rp07.onrender.com", credentials: true })); // Adjust origin for frontend
 app.use(cookieParser());
 
 app.use("/api/auth", authRoutes);
