@@ -16,7 +16,7 @@ const Navbar = ({ scrollToProducts, scrollToContact }) => {
             alt="Male Fashion Logo" 
             className="w-12 h-12"
           />
-          <span className="text-3xl font-bold text-black">Male Fashion</span>
+          <span className="text-2xl font-bold text-black">Male Fashion</span>
         </Link>
 
         {/* Desktop Navigation Links */}
